@@ -1,0 +1,17 @@
+{
+  "name": "Twitter Following as default",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Sets your default Twitter frontpage to Following instead of For You",
+    "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "run_at": "document_end",
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
